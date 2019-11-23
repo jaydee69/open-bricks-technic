@@ -3,21 +3,22 @@ include <ObtBarConst.scad>
 use <ObtBarInner.scad>
 use <ObtBarEnd.scad>
 
-module obtBar(countHoles, color = "grey"){
+module obtBar(countHoles, color = 0){
 	assert(countHoles >= 2);
 	countInnerHoles = countHoles - 2;
-	color(color)
-	union(){
-		yOffset1 = -1 * (countInnerHoles + 1) / 2 * OBT_BAR_HOLE_DISTANCE;
-		translate([0, yOffset1, 0]) obtBarEnd();
-		if(countInnerHoles > 0){
-			for(i = [0:countInnerHoles - 1]){
-				yOffset = (i - (countInnerHoles - 1) / 2) * OBT_BAR_HOLE_DISTANCE;
-				translate([0, yOffset, 0]) obtBarInner();
+	color(color){
+		union(){
+			yOffset1 = -1 * (countInnerHoles + 1) / 2 * OBT_BAR_HOLE_DISTANCE;
+			translate([0, yOffset1, 0]) obtBarEnd();
+			if(countInnerHoles > 0){
+				for(i = [0:countInnerHoles - 1]){
+					yOffset = (i - (countInnerHoles - 1) / 2) * OBT_BAR_HOLE_DISTANCE;
+					translate([0, yOffset, 0]) obtBarInner();
+				}
 			}
+			yOffset2 = (countInnerHoles + 1) / 2 * OBT_BAR_HOLE_DISTANCE;
+			translate([0, yOffset2, 0]) rotate([180, 0, 0]) obtBarEnd();
 		}
-		yOffset2 = (countInnerHoles + 1) / 2 * OBT_BAR_HOLE_DISTANCE;
-		translate([0, yOffset2, 0]) rotate([180, 0, 0]) obtBarEnd();
 	}
 }
 
