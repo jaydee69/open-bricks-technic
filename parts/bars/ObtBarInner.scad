@@ -24,7 +24,7 @@ module obtBarInnerDiff(){
 		obtBarInnerDiffBase(-1);
 		obtBarInnerDiffBase(1);
 		cylinder(OBT_BAR_HEIGHT, d1 = OBT_BAR_HOLE_DIAMETER, d2 = OBT_BAR_HOLE_DIAMETER, center = true);
-		obtBarCommonHolePhaseDiff();
+		obtBarCommonHoleChamferDiff();
 	}
 }
 
