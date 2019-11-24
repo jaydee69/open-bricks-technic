@@ -28,8 +28,8 @@ module obtPinDiff(){
 	}
 }
 
-module obtPinConnector(){
-	color("#303030")
+module obtPinConnector(color = "#303030"){
+	color(color)
 		difference(){
 			obtPinBase();
 			obtPinDiff();
@@ -41,3 +41,4 @@ module obtPinConnector(){
 translate([0, 10, 0]) color("green") obtPinBase();
 translate([0, 20, 0]) color("red") obtPinDiff();
 obtPinConnector();
+translate([0, -10, 0]) obtPinConnector(0);
