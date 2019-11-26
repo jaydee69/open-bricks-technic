@@ -1,8 +1,4 @@
-include <../parts/bars/ObtBarConst.scad>
-include <../parts/pins/ObtPinConst.scad>
-include <../parts/pins/ObtPins.scad>
-
-use <../parts/bars/ObtBar.scad>
+include <../parts/ObtParts.scad>
 
 translate([0, 0, 0]) obtBar(5, "red");
 translate([0, 0, OBT_PIN_LENGTH / 2]) obtPinConnector();
