@@ -3,7 +3,7 @@ include <ObtBarConst.scad>
 use <ObtBarInner.scad>
 use <ObtBarEnd.scad>
 
-module obtBar(countHoles, color = 0){
+module obtBarStd(countHoles, color = 0){
 	assert(countHoles >= 2);
 	countInnerHoles = countHoles - 2;
 	color(color){
@@ -23,7 +23,7 @@ module obtBar(countHoles, color = 0){
 }
 
 // Test
-translate([0, 0, 0]) obtBar(8);
-translate([10, 0, 0]) rotate([0, 90, 0]) obtBar(5, "green");
-translate([-10, 0, 0]) rotate([90, 0, 0]) obtBar(3, "red");
-translate([20, 0, -1 * OBT_BAR_HOLE_DISTANCE / 2]) rotate([90, 0, 90]) obtBar(2, "blue");
+translate([0, 0, 0]) obtBarStd(8);
+translate([10, 0, 0]) rotate([0, 90, 0]) obtBarStd(5, "green");
+translate([-10, 0, 0]) rotate([90, 0, 0]) obtBarStd(3, "red");
+translate([20, 0, -1 * OBT_BAR_HOLE_DISTANCE / 2]) rotate([90, 0, 90]) obtBarStd(2, "blue");
