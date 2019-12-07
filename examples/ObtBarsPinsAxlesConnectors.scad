@@ -16,4 +16,6 @@ translate([0, -2 * HD,        BH]) rotate([0  ,   0,   0]) obtBarStd(3, "red");
 translate([0,  1 * HD, -0.5 * PL]) rotate([0  ,   0,   0]) obtPinConnector();
 translate([0,  3 * HD, -0.5 * PL]) rotate([0  ,   0,   0]) obtPinConnector();
 
-translate([0, -2 * HD,         0]) rotate([0  ,   0,   0]) obtAxStd(5.5, "lightgrey", -20);
+translate([0, -2 * HD, -1.0 * PL]) rotate([0  ,   0,   0]) obtBarTee3x3(color = "#303030");
+
+translate([0, -2 * HD,         0]) rotate([0  ,   0,   0]) obtAxStd(5.5, "lightgrey", 0);
