@@ -3,35 +3,22 @@ include <ObtBarConst.scad>
 use <ObtBarCommon.scad>
 
 module obtBarInnerBase(){
-	length = OBT_BAR_HOLE_DISTANCE;
-	cube([OBT_BAR_WIDTH, length, OBT_BAR_HEIGHT], center = true);
-}
-
-module obtBarInnerDiffBase(zOffsetDirection){
-	length = OBT_BAR_HOLE_DISTANCE;
-	height = 3.5;
-	zOffset = zOffsetDirection * (height / 2 + OBT_BAR_HEIGHT / 2 - height);
-	translate([0, 0, zOffset]){
-		difference(){
-			cube([OBT_BAR_INNER_WIDTH, length * 1.01, height * 1.01], center = true);
-			cylinder(OBT_BAR_HEIGHT, d1 = OBT_BAR_HOLE_DIAMETER_OUTER, d2 = OBT_BAR_HOLE_DIAMETER_OUTER, center = true);
-		}
-	}
+	cube([OBT_BAR_WIDTH, OBT_BAR_HOLE_DISTANCE, OBT_BAR_HEIGHT], center = true);
 }
 
 module obtBarInnerDiff(){
 	union(){
-		obtBarInnerDiffBase(-1);
-		obtBarInnerDiffBase(1);
-		cylinder(OBT_BAR_HEIGHT, d1 = OBT_BAR_HOLE_DIAMETER, d2 = OBT_BAR_HOLE_DIAMETER, center = true);
-		obtBarCommonHoleChamferDiff();
+		obtBarCommonHoleDiff();
+		obtBarCommonDiffBase( 1,   0);
+		obtBarCommonDiffBase( 1, 180);
+		obtBarCommonDiffBase(-1,   0);
+		obtBarCommonDiffBase(-1, 180);
 	}
 }
 
 module obtBarInner(){
-	length = OBT_BAR_HOLE_DISTANCE;
 	difference(){
-		cube([OBT_BAR_WIDTH, length, OBT_BAR_HEIGHT], center = true);
+		obtBarInnerBase();
 		obtBarInnerDiff();
 	}
 }
