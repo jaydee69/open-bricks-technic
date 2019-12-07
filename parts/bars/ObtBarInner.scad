@@ -3,8 +3,7 @@ include <ObtBarConst.scad>
 use <ObtBarCommon.scad>
 
 module obtBarInnerBase(){
-	length = OBT_BAR_HOLE_DISTANCE;
-	cube([OBT_BAR_WIDTH, length, OBT_BAR_HEIGHT], center = true);
+	cube([OBT_BAR_WIDTH, OBT_BAR_HOLE_DISTANCE, OBT_BAR_HEIGHT], center = true);
 }
 
 module obtBarInnerDiffBase(zOffsetDirection){
@@ -29,9 +28,8 @@ module obtBarInnerDiff(){
 }
 
 module obtBarInner(){
-	length = OBT_BAR_HOLE_DISTANCE;
 	difference(){
-		cube([OBT_BAR_WIDTH, length, OBT_BAR_HEIGHT], center = true);
+		obtBarInnerBase();
 		obtBarInnerDiff();
 	}
 }
