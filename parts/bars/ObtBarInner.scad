@@ -1,6 +1,6 @@
 include <ObtBarConst.scad>
 
-use <ObtBarCommon.scad>
+use <ObtBarCommonDiff.scad>
 
 module obtBarInnerBase(){
 	cube([OBT_BAR_WIDTH, OBT_BAR_HOLE_DISTANCE, OBT_BAR_HEIGHT], center = true);

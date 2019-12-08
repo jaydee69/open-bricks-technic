@@ -1,7 +1,6 @@
 include <ObtBarConst.scad>
 
-use <ObtBarCommon.scad>
-use <ObtBarInner.scad>
+use <ObtBarCommonDiff.scad>
 
 module obtBarEndBase(){
 	length = OBT_BAR_HOLE_DISTANCE / 2;
@@ -11,24 +10,11 @@ module obtBarEndBase(){
 	}
 }
 
-module obtBarEndDiffBase(zOffsetDirection){
-	length = OBT_BAR_HOLE_DISTANCE / 2;
-	height = 3.5;
-	zOffset = zOffsetDirection * (height / 2 + OBT_BAR_HEIGHT / 2 - height);
-	translate([0, 0, zOffset]){
-		difference(){
-			translate([0, length / 2, 0]) cube([OBT_BAR_INNER_WIDTH, length * 1.01, height * 1.01], center = true);
-			cylinder(OBT_BAR_HEIGHT, d1 = OBT_BAR_HOLE_DIAMETER_OUTER, d2 = OBT_BAR_HOLE_DIAMETER_OUTER, center = true);
-		}
-	}
-}
-
 module obtBarEndDiff(){
 	union(){
-		obtBarEndDiffBase(-1);
-		obtBarEndDiffBase(1);
-		cylinder(OBT_BAR_HEIGHT, d1 = OBT_BAR_HOLE_DIAMETER, d2 = OBT_BAR_HOLE_DIAMETER, center = true);
-		obtBarCommonHoleChamferDiff();
+		obtBarCommonDiffBase( 1, 0);
+		obtBarCommonDiffBase(-1, 0);
+		obtBarCommonHoleDiff();
 	}
 }
 
