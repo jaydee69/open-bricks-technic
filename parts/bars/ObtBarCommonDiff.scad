@@ -20,16 +20,16 @@ module obtBarCommonHoleDiff(){
 }
 
 module obtBarCommonDiffBase(zOffsetDirection, rotation){
-	height = 3.5;
+	height = 0.5 * (OBT_BAR_HEIGHT - OBT_BAR_WEB_WIDTH);
 	zOffset = zOffsetDirection * 0.5 * (OBT_BAR_HEIGHT - height);
-	translate([0, 0, zOffset]){
+	translate([0, 0, zOffset])
 		rotate([0, 0, rotation])
-		difference(){
+			difference(){
 				translate([0, 0.25 * OBT_BAR_HOLE_DISTANCE + 0.001, 0])
 					cube([OBT_BAR_INNER_WIDTH, 0.5 * OBT_BAR_HOLE_DISTANCE, height + 0.01], center = true);
-			cylinder(OBT_BAR_HEIGHT, d1 = OBT_BAR_HOLE_DIAMETER_OUTER, d2 = OBT_BAR_HOLE_DIAMETER_OUTER, center = true);
-		}
-	}
+				cylinder(OBT_BAR_HEIGHT, d1 = OBT_BAR_HOLE_DIAMETER_OUTER, d2 = OBT_BAR_HOLE_DIAMETER_OUTER, center = true);
+			}
+	
 }
 
 module obtBarCommonDiffInnerCorner(rotation){
