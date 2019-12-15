@@ -1,4 +1,5 @@
 include <../../globals/ObtGlobalConst.scad>
+include <../pins/ObtPinConst.scad>
 
 // Connector dimenstions
 OBT_CON_WIDTH = OBT_GLOBAL_BAR_WIDTH;

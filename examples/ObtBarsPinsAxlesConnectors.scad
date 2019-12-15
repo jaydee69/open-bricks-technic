@@ -20,3 +20,4 @@ translate([ 0 * HD, +3 * HD, +1.0 * PL]) rotate([180,   0,    0]) obtBarEll5x3(c
 translate([ 0 * HD, -2 * HD,         0]) rotate([  0,   0,    0]) obtAxStd(5.5, "lightgrey", 0);
 translate([+2 * HD, +3 * HD,  0.0 * BH]) rotate([  0,  90 ,  90]) obtCon4PinStd();
 translate([+4 * HD, +3 * HD, +2.0 * BH]) rotate([  0,  90 , -90]) obtCon4PinAngled();
+translate([ 0 * HD, +2 * HD, +2.0 * BH]) rotate([ 90,   0 ,  45]) obtCon2PinSglHole();
