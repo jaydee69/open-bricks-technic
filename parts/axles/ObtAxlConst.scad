@@ -1,6 +1,6 @@
 include <../../globals/ObtGlobalConst.scad>
 
 // Axles dimensions
-OBT_AX_DIAMETER = 4.7;
-OBT_AX_BASE_LENGTH = 10;
+OBT_AXL_DIAMETER = 4.7;
+OBT_AXL_BASE_LENGTH = 10;
 

@@ -4,18 +4,32 @@ An OpenSCAD library for creating brick models.
 
 ## Usage
 
+Just clone or copy the open-bricks-technic library to your desired folder and include the files by using `include <./open-bricks-technic/parts/ObtParts.scad>`
+
+In case of the files cloned to `./lib/` a file demo.scad would e.g. look like
+
+```
+include <./libs/open-bricks-technic/parts/ObtParts.scad>
+
+obtBarStd(5, "red");
+```
+
+and results in
+
+![Simple demo](./doc/images/ObtDemo.png)
+
 
 ## Available parts
 
 ### Axles
 
 ```
-obtAxStd(11, "lightgrey");
-obtAxStd(9, "#303030");
-obtAxStd(7, "lightgrey");
-obtAxStd(5, "#303030");
-obtAxStd(3, "lightgrey");
-obtAxStd(2, "#303030");
+obtAxlStd(11, "lightgrey");
+obtAxlStd(9, "#303030");
+obtAxlStd(7, "lightgrey");
+obtAxlStd(5, "#303030");
+obtAxlStd(3, "lightgrey");
+obtAxlStd(2, "#303030");
 ```
 ![Axles overview](./doc/images/ObtAxOverwiew.png)
 
@@ -54,6 +68,6 @@ obtCon2PinSglHole();
 
 ## Link collection
 
-- [A list to a lot of real parts](https://www.brick-shop.de/index.php?cat=c670_LEGO-Technic-Technic-Steine-Liftarme-Kran-Dachsteine-Schraegsteine-Ersatzsteine-Einzelsteine-Lego-Brick-Shop-Lego-Shop-Pickabrick-selten-rar-box-Pick-A-Brick.html), buyable in a German brick shop
+- A list to a lot of real parts, buyable in a German [brick shop](https://www.brick-shop.de/index.php?cat=c670_LEGO-Technic-Technic-Steine-Liftarme-Kran-Dachsteine-Schraegsteine-Ersatzsteine-Einzelsteine-Lego-Brick-Shop-Lego-Shop-Pickabrick-selten-rar-box-Pick-A-Brick.html)
 
 

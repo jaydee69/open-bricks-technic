@@ -17,7 +17,7 @@ translate([ 0 * HD, +1 * HD, +0.5 * PL]) rotate([  0,   0,    0]) obtPinConnecto
 translate([ 0 * HD, +3 * HD, +0.5 * PL]) rotate([  0,   0,    0]) obtPinConnector();
 translate([ 0 * HD, -2 * HD, -1.0 * PL]) rotate([  0,   0,    0]) obtBarTee3x3(color = "#303030");
 translate([ 0 * HD, +3 * HD, +1.0 * PL]) rotate([180,   0,    0]) obtBarEll5x3(color = "orange");
-translate([ 0 * HD, -2 * HD,         0]) rotate([  0,   0,    0]) obtAxStd(5.5, "lightgrey", 0);
+translate([ 0 * HD, -2 * HD,         0]) rotate([  0,   0,    0]) obtAxlStd(5.5, "lightgrey", 0);
 translate([+2 * HD, +3 * HD,  0.0 * BH]) rotate([  0,  90 ,  90]) obtCon4PinStd();
 translate([+4 * HD, +3 * HD, +2.0 * BH]) rotate([  0,  90 , -90]) obtCon4PinAngled();
 translate([ 0 * HD, +2 * HD, +2.0 * BH]) rotate([ 90,   0 ,  45]) obtCon2PinSglHole();
