@@ -1,22 +1,24 @@
 # open-bricks-technic
 
-An OpenSCAD library for creating brick models.
+An [OpenSCAD](https://www.openscad.org/) library for creating brick-technic models.
 
 ## Usage
 
-Just clone or copy the open-bricks-technic library to your desired folder and include the files by using `include <./open-bricks-technic/parts/ObtParts.scad>`
+Just clone or copy the open-bricks-technic library to your desired folder and include the files by using `include <./path/to/open-bricks-technic/parts/ObtParts.scad>` to your project.
 
-In case of the files cloned to `./lib/` a file demo.scad would e.g. look like
+In case of cloning the files to `./lib/` a file could e.g. look like
 
 ```
-include <./libs/open-bricks-technic/parts/ObtParts.scad>
+    include <./libs/open-bricks-technic/parts/ObtParts.scad>
 
-obtBarStd(5, "red");
+    obtBarStd(5, "red");
 ```
 
-and results in
+and its output will result in
 
-![Simple demo](./doc/images/ObtDemo.png)
+![Simple example](./doc/images/ObtSimpleExample.png)
+
+More information, you can find in the [detailed description](./doc/usage.md).
 
 
 ## Available parts
@@ -68,6 +70,7 @@ obtCon2PinSglHole();
 
 ## Link collection
 
+- Catalog of the online trading platform [Bricklink](https://www.bricklink.com/catalogTree.asp?itemBrand=1000&itemType=P)
 - A list to a lot of real parts, buyable in a German [brick shop](https://www.brick-shop.de/index.php?cat=c670_LEGO-Technic-Technic-Steine-Liftarme-Kran-Dachsteine-Schraegsteine-Ersatzsteine-Einzelsteine-Lego-Brick-Shop-Lego-Shop-Pickabrick-selten-rar-box-Pick-A-Brick.html)
 
 
