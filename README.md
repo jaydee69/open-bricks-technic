@@ -11,7 +11,7 @@ In case of cloning the files to `./lib/` a file could e.g. look like
 ```
     include <./libs/open-bricks-technic/parts/ObtParts.scad>
 
-    obtBarStd(5, "red");
+    obtLftStd(5, "red");
 ```
 
 and its output will result in
@@ -36,16 +36,16 @@ obtAxlStd(2, "#303030");
 ![Axles overview](./doc/images/ObtAxOverwiew.png)
 
 
-### Bars
+### Liftarms
 
 ```
-obtBarStd(7, "red");
-obtBarStd(5, "lightgrey");
-obtBarStd(3, "#303030");
-obtBarTee3x3("#303030");
-obtBarEll5x3("green");
+obtLftStd(7, "red");
+obtLftStd(5, "lightgrey");
+obtLftStd(3, "#303030");
+obtLftTee3x3("#303030");
+obtLftEll5x3("green");
 ```
-![Bars overview](./doc/images/ObtBarOverwiew.png)
+![Bars overview](./doc/images/ObtLftOverwiew.png)
 
 
 ### Pins

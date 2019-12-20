@@ -2,32 +2,32 @@ include <ObtLftConst.scad>
 
 use <ObtLftCommonDiff.scad>
 
-module obtBarEndBase(){
-	length = OBT_BAR_HOLE_DISTANCE / 2;
+module obtLftEndBase(){
+	length = OBT_LFT_HOLE_DISTANCE / 2;
 	union(){
-		cylinder(OBT_BAR_HEIGHT, d1 = OBT_BAR_WIDTH, d2 = OBT_BAR_WIDTH, center = true);
-		translate([0, length / 2, 0]) cube([OBT_BAR_WIDTH, length, OBT_BAR_HEIGHT], center = true);
+		cylinder(OBT_LFT_HEIGHT, d1 = OBT_LFT_WIDTH, d2 = OBT_LFT_WIDTH, center = true);
+		translate([0, length / 2, 0]) cube([OBT_LFT_WIDTH, length, OBT_LFT_HEIGHT], center = true);
 	}
 }
 
-module obtBarEndDiff(){
+module obtLftEndDiff(){
 	union(){
-		obtBarCommonDiffBase( 1, 0);
-		obtBarCommonDiffBase(-1, 0);
-		obtBarCommonHoleDiff();
+		obtLftCommonDiffBase( 1, 0);
+		obtLftCommonDiffBase(-1, 0);
+		obtLftCommonHoleDiff();
 	}
 }
 
-module obtBarEnd(){
+module obtLftEnd(){
 	difference(){
-		obtBarEndBase();
-		obtBarEndDiff();
+		obtLftEndBase();
+		obtLftEndDiff();
 	}
 }
 
 // Test
-translate([0, 10, 0]) color("green") obtBarEndBase();
-translate([0, 20, 0]) color("red") obtBarEndDiff();
-obtBarEnd();
+translate([0, 10, 0]) color("green") obtLftEndBase();
+translate([0, 20, 0]) color("red") obtLftEndDiff();
+obtLftEnd();
 
 

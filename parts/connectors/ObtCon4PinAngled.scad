@@ -27,16 +27,16 @@ module obtCon4PinAngled(color = "lightgrey"){
 				rotate([  0, 180, -90])
 					obtConEndSglPin();
 
-			translate([    1 * OBT_GLOBAL_BAR_HEIGHT,  0 * OBT_GLOBAL_HOLE_DISTANCE, 0])
+			translate([    1 * OBT_GLOBAL_LFT_HEIGHT,  0 * OBT_GLOBAL_HOLE_DISTANCE, 0])
 				rotate([-90,   0, -90])
 					obtPinBase(rotateSlit = true);
-			translate([    1 * OBT_GLOBAL_BAR_HEIGHT, -2 * OBT_GLOBAL_HOLE_DISTANCE, 0])
+			translate([    1 * OBT_GLOBAL_LFT_HEIGHT, -2 * OBT_GLOBAL_HOLE_DISTANCE, 0])
 				rotate([-90,   0, -90])
 					obtPinBase(rotateSlit = true);
-			translate([ 0 * OBT_GLOBAL_HOLE_DISTANCE,  0 * OBT_GLOBAL_HOLE_DISTANCE + 1 * OBT_GLOBAL_BAR_HEIGHT, 0])
+			translate([ 0 * OBT_GLOBAL_HOLE_DISTANCE,  0 * OBT_GLOBAL_HOLE_DISTANCE + 1 * OBT_GLOBAL_LFT_HEIGHT, 0])
 				rotate([-90,   0,   0])
 					obtPinBase(rotateSlit = true);
-			translate([-2 * OBT_GLOBAL_HOLE_DISTANCE,  0 * OBT_GLOBAL_HOLE_DISTANCE + 1 * OBT_GLOBAL_BAR_HEIGHT, 0])
+			translate([-2 * OBT_GLOBAL_HOLE_DISTANCE,  0 * OBT_GLOBAL_HOLE_DISTANCE + 1 * OBT_GLOBAL_LFT_HEIGHT, 0])
 				rotate([-90,   0,   0])
 					obtPinBase(rotateSlit = true);
 		}
@@ -63,16 +63,16 @@ color("green"){
 		rotate([  0, 180, -90])
 			obtConEndSglPin();
 
-	translate([    1 * 1.5 * OBT_GLOBAL_BAR_HEIGHT,  0 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE, -20])
+	translate([    1 * 1.5 * OBT_GLOBAL_LFT_HEIGHT,  0 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE, -20])
 		rotate([-90,   0, -90])
 			obtPinBase(rotateSlit = true);
-	translate([    1 * 1.5 * OBT_GLOBAL_BAR_HEIGHT, -2 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE, -20])
+	translate([    1 * 1.5 * OBT_GLOBAL_LFT_HEIGHT, -2 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE, -20])
 		rotate([-90,   0, -90])
 			obtPinBase(rotateSlit = true);
-	translate([ 0 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE,  0 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE + 1 * 1.5 * OBT_GLOBAL_BAR_HEIGHT, -20])
+	translate([ 0 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE,  0 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE + 1 * 1.5 * OBT_GLOBAL_LFT_HEIGHT, -20])
 		rotate([-90,   0,   0])
 			obtPinBase(rotateSlit = true);
-	translate([-2 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE,  0 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE + 1 * 1.5 * OBT_GLOBAL_BAR_HEIGHT, -20])
+	translate([-2 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE,  0 * 1.5 * OBT_GLOBAL_HOLE_DISTANCE + 1 * 1.5 * OBT_GLOBAL_LFT_HEIGHT, -20])
 		rotate([-90,   0,   0])
 			obtPinBase(rotateSlit = true);
 }

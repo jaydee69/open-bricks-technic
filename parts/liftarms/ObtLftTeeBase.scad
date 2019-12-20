@@ -3,35 +3,35 @@ include <ObtLftConst.scad>
 use <ObtLftCommonDiff.scad>
 
 
-module obtBarTeeBaseBase(){
-	cube([OBT_BAR_HOLE_DISTANCE, OBT_BAR_HOLE_DISTANCE, OBT_BAR_HEIGHT], center = true);
+module obtLftTeeBaseBase(){
+	cube([OBT_LFT_HOLE_DISTANCE, OBT_LFT_HOLE_DISTANCE, OBT_LFT_HEIGHT], center = true);
 }
 
-module obtBarTeeBaseDiff(){
+module obtLftTeeBaseDiff(){
 	union(){
-		obtBarCommonDiffWidthReduction(0);
-		obtBarCommonHoleDiff();
-		obtBarCommonDiffBase( 1,   0);
-		obtBarCommonDiffBase( 1, 180);
-		obtBarCommonDiffBase( 1, 270);
-		obtBarCommonDiffBase(-1,   0);
-		obtBarCommonDiffBase(-1, 180);
-		obtBarCommonDiffBase(-1, 270);
-		obtBarCommonDiffInnerCorner(0);
-		obtBarCommonDiffInnerCorner(-90);
+		obtLftCommonDiffWidthReduction(0);
+		obtLftCommonHoleDiff();
+		obtLftCommonDiffBase( 1,   0);
+		obtLftCommonDiffBase( 1, 180);
+		obtLftCommonDiffBase( 1, 270);
+		obtLftCommonDiffBase(-1,   0);
+		obtLftCommonDiffBase(-1, 180);
+		obtLftCommonDiffBase(-1, 270);
+		obtLftCommonDiffInnerCorner(0);
+		obtLftCommonDiffInnerCorner(-90);
 	}
 }
 
-module obtBarTeeBase(){
+module obtLftTeeBase(){
 	difference(){
-		obtBarTeeBaseBase();
-		obtBarTeeBaseDiff();
+		obtLftTeeBaseBase();
+		obtLftTeeBaseDiff();
 	}
 }
 
 
 // Test
-translate([0, 10, 0]) color("green") obtBarTeeBaseBase();
-translate([0, 20, 0]) color("red") obtBarTeeBaseDiff();
-obtBarTeeBase();
+translate([0, 10, 0]) color("green") obtLftTeeBaseBase();
+translate([0, 20, 0]) color("red") obtLftTeeBaseDiff();
+obtLftTeeBase();
 

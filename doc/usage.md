@@ -8,7 +8,7 @@ In case of cloning the files to `./lib/` a file  could e.g. look like
 ```
     include <./libs/open-bricks-technic/parts/ObtParts.scad>
 
-    obtBarStd(5, "red");
+    obtLftStd(5, "red");
 ```
 
 and its output will result in
