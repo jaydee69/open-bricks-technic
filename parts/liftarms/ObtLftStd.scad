@@ -1,7 +1,7 @@
-include <ObtBarConst.scad>
+include <ObtLftConst.scad>
 
-use <ObtBarInner.scad>
-use <ObtBarEnd.scad>
+use <ObtLftInner.scad>
+use <ObtLftEnd.scad>
 
 module obtBarStd(countHoles, color = 0){
 	assert(countHoles >= 2);

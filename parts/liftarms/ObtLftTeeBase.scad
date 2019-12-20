@@ -1,6 +1,6 @@
-include <ObtBarConst.scad>
+include <ObtLftConst.scad>
 
-use <ObtBarCommonDiff.scad>
+use <ObtLftCommonDiff.scad>
 
 
 module obtBarTeeBaseBase(){

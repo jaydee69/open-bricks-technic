@@ -1,4 +1,4 @@
-include <ObtBarConst.scad>
+include <ObtLftConst.scad>
 
 module obtBarCommonHoleChamferDiffBase(zOffsetDirection){
 	zOffset = zOffsetDirection * (OBT_BAR_HEIGHT / 2 - OBT_BAR_HOLE_CHAMFER_HEIGHT / 2);

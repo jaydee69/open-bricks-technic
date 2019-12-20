@@ -1,4 +1,4 @@
-use <ObtBarTee.scad>
+use <ObtLftTee.scad>
 
 module obtBarTee3x3(color = 0){
 	obtBarTee(3, 3, color);
